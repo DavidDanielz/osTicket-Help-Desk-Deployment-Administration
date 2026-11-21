@@ -2,6 +2,354 @@
   <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
+<h1 align="center">osTicket Help Desk Deployment & Administration</h1>
+<h2 align="center">Installation, Configuration, and Ticket Lifecycle</h2>
+
+<h3 align="center">
+Microsoft Azure | Windows Server | IIS | PHP | MySQL | osTicket
+</h3>
+
+<div align="center">
+  
+  ![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+  ![IIS](https://img.shields.io/badge/IIS-5E5E5E?style=for-the-badge)
+  ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+  ![osTicket](https://img.shields.io/badge/osTicket-2C3E50?style=for-the-badge)
+
+</div>
+
+---
+
+## 📋 Project Overview
+
+**Project Type:** Help Desk Administration & Web Application Deployment  
+**Status:** Complete and Fully Operational  
+**Business Use Case:** Centralized ticketing, SLA management, and user support workflows in a cloud hosted environment.  
+
+I built this lab to practice the core Help Desk tasks I will perform daily: deploying a ticketing system, configuring support teams, and managing the lifecycle of a user ticket from creation to resolution. It demonstrates the deployment of a traditional web stack (IIS, PHP, MySQL) on a Windows Server VM in Microsoft Azure, followed by the administrative configuration of the osTicket application.
+
+---
+
+## 🖥️ Environments & Technologies Used
+
+- Microsoft Azure (Virtual Machines & Networking)
+- Windows 11 Pro (Host OS)
+- Internet Information Services (IIS) with CGI
+- PHP 7.3.8
+- MySQL Server 5.5
+- HeidiSQL
+- osTicket v1.15.8
+- Remote Desktop Protocol (RDP)
+
+---
+
+## 🛠️ Hands-On Deployment: From Azure Setup to Help Desk
+
+### 1️⃣ Step 1: Install and Deploy osTicket
+
+**Goal:** Provision the Azure VM, install the web stack (IIS, PHP, MySQL), and launch the osTicket web installer.
+
+**Procedure:**
+
+Before installing the ticketing software, I needed to build the web server. I provisioned a Windows 11 VM in Azure and configured IIS with CGI so it could execute PHP scripts.
+
+<img src="images/step-01-azure-vm/step-01-azure-vm-created.png.png" width="100%" alt="Azure VM Creation">
+<br>
+
+**What I did:** Created a Windows 11 VM named osTicket-VM in Azure to host the environment.
+
+---
+
+<img src="images/step-01-azure-vm/step-01-basics-tab.png.png" width="100%" alt="Azure VM Basics">
+<br>
+
+**What I did:** Configured the Basics tab with the Resource Group, Region, and Administrator credentials.
+
+---
+
+<img src="images/step-01-azure-vm/step-01-deployment-complete.png.png" width="100%" alt="Deployment Complete">
+<br>
+
+**What I did:** Confirmed the VM was successfully deployed and running in the Azure portal.
+
+---
+
+Next, I established an RDP connection to the VM to begin the software installation.
+
+<img src="images/step-02-rdp/step-02-rdp-connection.png.png" width="100%" alt="RDP Connection">
+<br>
+
+**What I did:** Downloaded the RDP file and connected to the VM using the local administrator credentials.
+
+---
+
+<img src="images/step-02-rdp/step-02-windows-desktop.png.png" width="100%" alt="Windows Desktop">
+<br>
+
+**What I did:** Verified the Remote Desktop session loaded successfully to the Windows 11 desktop.
+
+---
+
+I then downloaded the osTicket installation files and extracted them locally on the VM.
+
+<img src="images/step-03-download/step-03-download-files.png.png" width="100%" alt="osTicket Downloaded">
+<br>
+
+**What I did:** Downloaded the latest osTicket v1.15.8 zip package from the official website.
+
+---
+
+<img src="images/step-03-download/step-03-folder-contents.png.png" width="100%" alt="osTicket Extracted">
+<br>
+
+**What I did:** Extracted the zip file and confirmed the upload and include folders were present.
+
+---
+
+Before osTicket could be installed, I needed to prepare the web server. I installed IIS and enabled the CGI feature so it could run PHP.
+
+<img src="images/step-04-iis/step-04-iis-checked.png.png" width="100%" alt="IIS Installed">
+<br>
+
+**What I did:** Enabled Internet Information Services (IIS) via the Windows Features menu.
+
+---
+
+<img src="images/step-04-iis/step-04-iis-cgi-checked.png.png" width="100%" alt="CGI Enabled">
+<br>
+
+**What I did:** Checked the CGI feature under Application Development Features so IIS could execute PHP scripts.
+
+---
+
+I installed the required dependencies: PHP Manager for IIS, URL Rewrite Module, Visual C++ Redistributable, PHP 7.3.8, and MySQL Server 5.5.
+
+<img src="images/step-05-iis-dependencies/step-05-php-manager-install.png.png" width="100%" alt="PHP Manager Installed">
+<br>
+
+**What I did:** Installed PHP Manager for IIS to manage PHP versions.
+
+---
+
+<img src="images/step-06-php-runtime/step-06-php-contents.png.png" width="100%" alt="PHP Extracted">
+<br>
+
+**What I did:** Extracted PHP 7.3.8 to C:\PHP and confirmed php-cgi.exe was present.
+
+---
+
+<img src="images/step-08-mysql/step-08-mysql-install.png.png" width="100%" alt="MySQL Installed">
+<br>
+
+**What I did:** Installed MySQL Server 5.5 and set a secure root password.
+
+---
+
+I registered PHP in IIS using PHP Manager, then deployed the osTicket files to the web root and ran the web installer.
+
+<img src="images/step-09-register-php/step-09-register-php-version.png.png" width="100%" alt="PHP Registered">
+<br>
+
+**What I did:** Registered php-cgi.exe in IIS via PHP Manager so IIS could execute .php files.
+
+---
+
+<img src="images/step-10-deploy-files/step-10-upload-to-wwwroot.png.png" width="100%" alt="Files Deployed">
+<br>
+
+**What I did:** Copied the osTicket upload folder to C:\inetpub\wwwroot\ and renamed it to osTicket.
+
+---
+
+<img src="images/step-10-deploy-files/step-10-installer-warnings.png.png" width="100%" alt="Installer Warnings">
+<br>
+
+**What I did:** Opened the web installer at http://localhost/osTicket/setup/ and reviewed the missing PHP extension warnings.
+
+---
+
+<img src="images/step-10-deploy-files/step-10-extensions-enabled.png.png" width="100%" alt="Extensions Enabled">
+<br>
+
+**What I did:** Enabled the required PHP extensions (IMAP, Intl, LDAP) via PHP Manager and confirmed all checks turned green.
+
+---
+
+<img src="images/step-15-install-complete/step-15-install-success.png.png" width="100%" alt="Install Success">
+<br>
+
+**What I did:** Completed the web installer, configured the help desk name and admin account, and verified the successful installation page.
+
+**Result:** The osTicket help desk portal is live and the admin account is ready.
+
+---
+
+### 2️⃣ Step 2: Post-Installation Configuration
+
+**Goal:** Configure the departments, agents, and user roles to simulate a real support team.
+
+**Procedure:**
+
+With the system installed, I logged into the Staff Control Panel (SCP) as the admin to begin configuring the help desk.
+
+<img src="1. osTicket Admin Panel dashboard.png" width="100%" alt="Admin Dashboard">
+<br>
+
+**What I did:** Logged into the osTicket admin control panel to begin system configuration.
+
+---
+
+First, I created the Agent Roles to control what support staff could see and do within the system.
+
+<img src="2. Expanded Access – Ticket Permissions.png" width="100%" alt="Ticket Permissions">
+<br>
+
+**What I did:** Configured ticket permissions for the agent role to control access.
+
+---
+
+<img src="3. Expanded Access – Task Permissions.png" width="100%" alt="Task Permissions">
+<br>
+
+**What I did:** Configured task permissions to restrict or allow internal task management.
+
+---
+
+<img src="4. Expanded Access – Knowledgebase Permissions.png" width="100%" alt="Knowledgebase Permissions">
+<br>
+
+**What I did:** Configured knowledgebase permissions to control access to internal documentation.
+
+---
+
+Next, I created the Departments so tickets could be routed to the correct support teams.
+
+<img src="5. Department Names.png" width="100%" alt="Department Setup">
+<br>
+
+**What I did:** Created new departments (e.g., IT Support, Network Support) to categorize incoming tickets.
+
+---
+
+I then added the Agents and assigned them to their respective departments and roles.
+
+<img src="7. Agents.png" width="100%" alt="Agent Configuration">
+<br>
+
+**What I did:** Provisioned new Agent accounts and assigned them to the correct departments.
+
+---
+
+Finally, I configured the Service Level Agreements (SLAs) to define response and resolution expectations.
+
+<img src="9. SLA.png" width="100%" alt="SLA Configuration">
+<br>
+
+**What I did:** Configured SLA plans to define response and resolution timeframes for different priority levels.
+
+**Result:** The help desk is now configured with departments, agents, roles, and SLAs ready for live support.
+
+---
+
+### 3️⃣ Step 3: Ticket Lifecycle Demonstration
+
+**Goal:** Demonstrate ticket triage, SLA priority setting, and resolution workflows.
+
+**Procedure:**
+
+To simulate a real Help Desk environment, I logged into the End-User portal and submitted a new support ticket.
+
+<img src="21. Open a new ticket and fill out.png" width="100%" alt="Ticket Created">
+<br>
+
+**What I did:** Submitted a new ticket from the end-user portal as a standard user.
+
+---
+
+I then logged into the Staff Control Panel as an agent, opened the ticket, and verified the intake details.
+
+<img src="5. Ticket 161725 2.png" width="100%" alt="Open Ticket">
+<br>
+
+**What I did:** Verified the ticket was received, reviewed the details, and took ownership of it as a support agent.
+
+---
+
+I updated the ticket status, communicated with the end-user, and documented the troubleshooting steps.
+
+<img src="6. Updated Ticket .png" width="100%" alt="Ticket Assignment">
+<br>
+
+**What I did:** Assigned the ticket to the appropriate department and began communicating with the end user.
+
+---
+
+<img src="7. Jane responses.png" width="100%" alt="Ticket In Progress">
+<br>
+
+**What I did:** Investigated the issue, documented the troubleshooting steps, and updated the ticket status.
+
+---
+
+Finally, I resolved the issue, posted a final response, and marked the ticket as closed.
+
+<img src="10. Closing Ticket .png" width="100%" alt="Ticket Resolution">
+<br>
+
+**What I did:** Resolved the issue, documented the fix in the ticket thread, and marked the ticket as closed.
+
+---
+
+<img src="11. Resolved Ticket.png" width="100%" alt="Ticket Resolved">
+<br>
+
+**What I did:** Verified the ticket was successfully resolved and archived for future reference.
+
+**Result:** Successfully demonstrated the complete lifecycle of a support ticket from creation to resolution.
+
+---
+
+## 🧠 Skills Demonstrated
+
+- **Help Desk Administration:** Ticket triage, SLA management, and user support workflows.
+- **Web Server Administration:** IIS configuration, PHP extension management, and MySQL database creation.
+- **Identity & Access Management:** Configuring agent roles, permissions, and department-based routing.
+- **Cloud Infrastructure:** Azure Virtual Machine provisioning and RDP connectivity.
+- **Application Deployment:** End-to-end installation of a web-based ticketing system.
+- **Technical Documentation:** Step-by-step reproduction instructions with visual proof.
+
+---
+
+## ✅ Outcome
+
+A fully functional osTicket help desk environment was successfully deployed and configured within Microsoft Azure. This project demonstrates my practical experience with web server administration, help desk configuration, and end-to-end ticket lifecycle management, simulating the daily operations of an IT support team.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p align="center">
+  <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+</p>
+
 <h1 align="center">osTicket – Prerequisites & Installation (Lab)</h1>
 
 <p align="center">
