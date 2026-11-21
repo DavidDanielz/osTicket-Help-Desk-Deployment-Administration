@@ -520,6 +520,109 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
+### Step 17: Post-Installation Configuration
+
+**Goal:** Configure the departments, agents, roles, and SLAs to simulate a real support team.
+
+**Procedure:**
+
+1. Log into the **Staff Control Panel** as the admin.
+2. Navigate to the **Admin Panel**.
+3. Under **Agents**, configure the **Roles** (permissions for tickets, tasks, and knowledgebase).
+4. Under **Agents**, create the **Departments** (e.g., IT Support, Network Support).
+5. Under **Agents**, create the **Agents** and assign them to departments.
+6. Under **Manage**, configure the **SLA Plans** (response and resolution timeframes).
+
+**Result:** The help desk is configured with departments, agents, roles, and SLAs.
+
+![Admin Dashboard](images/01-admin-dashboard.png)
+<br>
+*Logged into the osTicket admin control panel to begin system configuration.*
+
+---
+
+![Agent Roles](images/02-agent-roles.png)
+<br>
+*Configured agent roles to control access and permissions (tickets, tasks, knowledgebase).*
+
+---
+
+![Departments](images/03-departments.png)
+<br>
+*Created departments (e.g., IT Support, Network Support) to properly route incoming tickets.*
+
+---
+
+![Agents](images/04-agents.png)
+<br>
+*Provisioned new Agent accounts and assigned them to the correct departments and roles.*
+
+---
+
+![SLA Plans](images/05-sla-plans.png)
+<br>
+*Configured SLA plans to define response and resolution timeframes.*
+
+---
+
+### Step 18: Ticket Lifecycle Demonstration
+
+**Goal:** Demonstrate ticket triage, SLA priority setting, and resolution workflows.
+
+**Procedure:**
+
+1. Open the **End-User Support Portal** (`http://localhost/osTicket/`).
+2. Submit a new ticket as a standard user.
+3. Log into the **Staff Control Panel** and open the ticket.
+4. Assign the ticket to the appropriate department and agent.
+5. Update the ticket status and communicate with the user.
+6. Resolve the issue and mark the ticket as **Closed**.
+
+**Result:** Successfully demonstrated the complete lifecycle of a support ticket from creation to resolution.
+
+![Ticket Creation](images/06-ticket-creation.png)
+<br>
+*Submitted a new ticket from the end-user portal as a standard user.*
+
+---
+
+![Ticket Intake](images/07-ticket-intake.png)
+<br>
+*Verified the ticket was received, reviewed the details, and took ownership of it as a support agent.*
+
+---
+
+![Ticket Reply](images/08-ticket-reply.png)
+<br>
+*Updated the ticket status, communicated with the end-user, and documented the troubleshooting steps.*
+
+---
+
+![Ticket Resolved](images/09-ticket-resolved.png)
+<br>
+*Resolved the issue, documented the fix in the ticket thread, and marked the ticket as closed.*
+
+---
+
+## Troubleshooting
+
+- **PHP extensions not loading in the installer** — ensure the `extension=` lines in `C:\PHP\php.ini` are uncommented, then run `iisreset`. PHP Manager's "Enable or disable an extension" does the same thing.
+- **"Database connection failed" in the installer** — verify the `osticket` user was created with `GRANT ALL PRIVILEGES ON osticket.*` and that the password in the installer matches what you set in HeidiSQL.
+- **HTTP 500 error when opening osTicket** — usually a missing extension or an incorrect `php-cgi.exe` registration; re-check Step 9 and Step 12.
+
+---
+
+## Skills Demonstrated
+
+- Microsoft Azure VM provisioning and networking
+- Windows 11 / IIS administration
+- PHP installation and configuration with PHP Manager
+- MySQL Server installation and database/user creation via HeidiSQL
+- Web application deployment (osTicket) and troubleshooting
+- Technical documentation with step-by-step reproduction instructions
+
+---
+
 ## Troubleshooting
 
 - **PHP extensions not loading in the installer** — ensure the `extension=` lines in `C:\PHP\php.ini` are uncommented, then run `iisreset`. PHP Manager's "Enable or disable an extension" does the same thing.
