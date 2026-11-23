@@ -541,85 +541,400 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-![Agent Roles](images/02-agent-roles.png)
+![Agent Roles](images/02a-agent-roles-tickets.png)
 <br>
 *Configured agent roles to control access and permissions (tickets, tasks, knowledgebase).*
 
 ---
 
-![Departments](images/03-departments.png)
+![Agent Roles](images/02b-agent-roles-tasks.png)
+<br>
+*Configured agent roles to control access and permissions (tickets, tasks, knowledgebase).*
+
+---
+
+![Agent Roles](images/02c-agent-roles-knowledgebase.png)
+<br>
+*Configured agent roles to control access and permissions (tickets, tasks, knowledgebase).*
+
+---
+
+![Departments](images/03-departments-SysAdmins.png)
 <br>
 *Created departments (e.g., IT Support, Network Support) to properly route incoming tickets.*
 
 ---
 
-![Agents](images/04-agents.png)
+![Teams](images/04-teams-online_banking.png)
+<br>
+*Created the Online Banking team to pull agents from different departments.*
+
+---
+
+![User Settings](images/05-user-settings-registration_required-unchecked.png)
+<br>
+*Configured User Settings to require registration and login before creating tickets.*
+
+---
+
+![Agents](images/06.a-agents-added-jane_doe.png)
 <br>
 *Provisioned new Agent accounts and assigned them to the correct departments and roles.*
 
 ---
 
-![SLA Plans](images/05-sla-plans.png)
+![Agents](images/06.b-agents-added-john_doe.png)
+<br>
+*Provisioned new Agent accounts and assigned them to the correct departments and roles.*
+
+---
+
+![Users](images/07a-users-added-ken_gordan.png)
+<br>
+*Created the end-user accounts Ken and Karen.*
+
+---
+
+![Users](images/07b-users-added-karen_escrobano.png)
+<br>
+*Created the end-user accounts Ken and Karen.*
+
+---
+
+![SLA Plans](images/08a-sla-plans-added-sev_a.png)
 <br>
 *Configured SLA plans to define response and resolution timeframes.*
 
 ---
 
+![SLA Plans](images/08b-sla-plans-added-sev_b.png)
+<br>
+*Configured SLA plans to define response and resolution timeframes.*
+
+---
+
+![SLA Plans](images/08c-sla-plans-added-sev_c.png)
+<br>
+*Configured SLA plans to define response and resolution timeframes.*
+
+---
+
+![Help Topics](images/09a-help-topics-added-business_critical_outage.png)
+<br>
+*Configured the Help Topics for users to select when creating a ticket.*
+
+---
+
+![Help Topics](images/09b-help-topics-added-personal_computer_issues.png)
+<br>
+*Configured the Help Topics for users to select when creating a ticket.*
+
+---
+
+![Help Topics](images/09c-help-topics-added-equipment_request.png)
+<br>
+*Configured the Help Topics for users to select when creating a ticket.*
+
+---
+
+![Help Topics](images/09d-help-topics-added-password_reset.png)
+<br>
+*Configured the Help Topics for users to select when creating a ticket.*
+
+---
+
+![Help Topics](images/09e-help-topics-added-other.png)
+<br>
+*Configured the Help Topics for users to select when creating a ticket.*
+
+---
+
 ### Step 18: Ticket Lifecycle Demonstration
 
-**Goal:** Demonstrate ticket triage, SLA priority setting, and resolution workflows.
+**Goal:** Demonstrate ticket triage, SLA priority setting, department routing, and resolution workflows across multiple support tiers.
 
 **Procedure:**
 
-1. Open the **End-User Support Portal** (`http://localhost/osTicket/`).
-2. Submit a new ticket as a standard user.
-3. Log into the **Staff Control Panel** and open the ticket.
-4. Assign the ticket to the appropriate department and agent.
-5. Update the ticket status and communicate with the user.
-6. Resolve the issue and mark the ticket as **Closed**.
+First, I changed the SysAdmins department to a Top Level Department and deleted the Maintenance department to clean up the department structure.
 
-**Result:** Successfully demonstrated the complete lifecycle of a support ticket from creation to resolution.
-
-![Ticket Creation](images/06-ticket-creation.png)
+![Department Changes](images/10a-dept-changes-maintenance-delete_page.png)
 <br>
-*Submitted a new ticket from the end-user portal as a standard user.*
+*Deleted the Maintenance department and confirmed SysAdmins is a top-level department.*
 
 ---
 
-![Ticket Intake](images/07-ticket-intake.png)
+As an end-user, I created the following ticket: "entire mobile/online banking system is down."
+
+![Ticket 1 Creation](images/11a-ticket1-creation-business_critical_outage.png)
 <br>
-*Verified the ticket was received, reviewed the details, and took ownership of it as a support agent.*
+*Submitted Ticket 1 as an end-user through the support portal.*
 
 ---
 
-![Ticket Reply](images/08-ticket-reply.png)
+![Ticket 1 Creation](images/11b-ticket1-creation-business_critical_outage-created.png)
 <br>
-*Updated the ticket status, communicated with the end-user, and documented the troubleshooting steps.*
+*Confirmed the ticket was successfully created.*
 
 ---
 
-![Ticket Resolved](images/09-ticket-resolved.png)
+As a Help Desk Agent (John), I observed the ticket's default properties (Priority, Department, SLA, Assigned To).
+
+![Ticket 1 Properties - John](images/12-ticket1-properties-john-read_only.png)
 <br>
-*Resolved the issue, documented the fix in the ticket thread, and marked the ticket as closed.*
+*Observed the default properties of Ticket 1 as John.*
 
 ---
 
-## Troubleshooting
+I posted an internal note as John.
 
-- **PHP extensions not loading in the installer** — ensure the `extension=` lines in `C:\PHP\php.ini` are uncommented, then run `iisreset`. PHP Manager's "Enable or disable an extension" does the same thing.
-- **"Database connection failed" in the installer** — verify the `osticket` user was created with `GRANT ALL PRIVILEGES ON osticket.*` and that the password in the installer matches what you set in HeidiSQL.
-- **HTTP 500 error when opening osTicket** — usually a missing extension or an incorrect `php-cgi.exe` registration; re-check Step 9 and Step 12.
+![Ticket 1 Internal Note](images/13a-internal-note-posted.png)
+<br>
+*Posted an internal note confirming the read-only access test.*
 
 ---
 
-## Skills Demonstrated
+I granted John full access to the SysAdmins department.
 
-- Microsoft Azure VM provisioning and networking
-- Windows 11 / IIS administration
-- PHP installation and configuration with PHP Manager
-- MySQL Server installation and database/user creation via HeidiSQL
-- Web application deployment (osTicket) and troubleshooting
-- Technical documentation with step-by-step reproduction instructions
+![Admin Grants Access](images/14-admin-grants-john-all_access.png)
+<br>
+*Granted John full access to the SysAdmins department.*
+
+---
+
+I set the priority to Emergency and documented the call with the end-user.
+
+![Ticket 1 Priority Update](images/15a-john-full-access-emergency.png)
+<br>
+*Updated the priority to Emergency and documented the call.*
+
+---
+
+![Ticket 1 Priority Updated](images/15b-priority-level-updated-successfully.png)
+<br>
+*Confirmed the priority was successfully updated.*
+
+---
+
+I updated the SLA plan to Sev-A and documented the business impact.
+
+![Ticket 1 SLA Update](images/16a-sla-plan-typing.png)
+<br>
+*Updated the SLA to Sev-A and documented the business impact.*
+
+---
+
+![Ticket 1 SLA Updated](images/16b-sla-updated.png)
+<br>
+*Confirmed the SLA was successfully updated.*
+
+---
+
+I updated the Help Topic to Business Critical Outage.
+
+![Ticket 1 Help Topic Update](images/17a-help_topic-typing.png)
+<br>
+*Updated the Help Topic to Business Critical Outage.*
+
+---
+
+![Ticket 1 Help Topic Updated](images/17b-help_topic-updated.png)
+<br>
+*Confirmed the Help Topic was successfully updated.*
+
+---
+
+I posted an escalation note documenting the transfer to the SysAdmin department.
+
+![Ticket 1 Escalation Note](images/18-john-escalation-note.png)
+<br>
+*Posted the escalation note in the ticket thread.*
+
+---
+
+I assigned the ticket to Jane Doe.
+
+![Ticket 1 Assigned to Jane](images/19a-ticket-assigned-jane.png)
+<br>
+*Selected Jane Doe as the assignee.*
+
+---
+
+![Ticket 1 Assigned to Jane](images/19b-ticket-assigned-jane-successfully.png)
+<br>
+*Confirmed the ticket was successfully assigned to Jane.*
+
+---
+
+I transferred the ticket to the SysAdmins department.
+
+![Ticket 1 Transferred to SysAdmins](images/20a-ticket-routed-sysadmins.png)
+<br>
+*Transferred the ticket to the SysAdmins department.*
+
+---
+
+As John, I could no longer access the ticket after the transfer.
+
+![Ticket 1 Access Denied](images/20b-ticket-routed-sysadmins-john-no-longer-has-access.png)
+<br>
+*Confirmed John lost access to the ticket after the transfer.*
+
+---
+
+Jane logged in and could see the escalated ticket.
+
+![Jane Logged In](images/21-jane-logged-in.png)
+<br>
+*Jane logged in and saw the Emergency ticket in her queue.*
+
+---
+
+Jane reviewed the full ticket history and posted a resolution reply.
+
+![Ticket 1 Full History](images/22-ticket-full-history-jane.png)
+<br>
+*Jane reviewed the full ticket history.*
+
+---
+
+![Ticket 1 Resolution Reply](images/23a-jane-post-reply.png)
+<br>
+*Jane posted the resolution reply.*
+
+---
+
+![Ticket 1 Resolution Reply](images/23b-jane-post-reply-successfully.png)
+<br>
+*Confirmed Jane's reply was posted successfully.*
+
+---
+
+Jane posted a final closing message.
+
+![Ticket 1 Closing Message](images/24-jane-posting-resolved-problem-closing-ticket.png)
+<br>
+*Jane posted the final closing message.*
+
+---
+
+Jane changed the status to Resolved.
+
+![Ticket 1 Status Resolved](images/25a-ticket-status-resolved.png)
+<br>
+*Changed the ticket status to Resolved.*
+
+---
+
+![Ticket 1 Status Resolved](images/25b-ticket-status-resolved-closed.png)
+<br>
+*Confirmed the ticket status was changed to Resolved.*
+
+---
+
+![Ticket 1 Status Resolved](images/25c-ticket-status-changed-resolved.png)
+<br>
+*Confirmed the ticket was successfully resolved.*
+
+---
+
+I repeated the process for the second ticket: "accounting department needs adobe upgrade, broken." Ken created the ticket.
+
+![Ticket 2 Creation](images/26-ken-ticket-created.png)
+<br>
+*Ken created the Adobe Reader ticket.*
+
+---
+
+John received the ticket and observed the properties.
+
+![Ticket 2 Received](images/27-john-recieves-ticket-ken.png)
+<br>
+*John received the ticket and observed the properties.*
+
+---
+
+John posted a detailed note documenting the investigation.
+
+![Ticket 2 Investigation](images/28-jane-posted-details-ken-situation-ticket.png)
+<br>
+*John documented the investigation details.*
+
+---
+
+John updated the priority to High.
+
+![Ticket 2 Priority Update](images/29a-priority-level-high-update.png)
+<br>
+*Updated the priority to High.*
+
+---
+
+![Ticket 2 Priority Updated](images/29b-priority-level-high-update-successful.png)
+<br>
+*Confirmed the priority was successfully updated.*
+
+---
+
+John updated the SLA to Sev-B.
+
+![Ticket 2 SLA Update](images/30a-sla_plan-sev-b-update.png)
+<br>
+*Updated the SLA to Sev-B.*
+
+---
+
+![Ticket 2 SLA Updated](images/30b-sla_plan-sev-b-update-successfully.png)
+<br>
+*Confirmed the SLA was successfully updated.*
+
+---
+
+John posted a reply confirming the solution.
+
+![Ticket 2 Solution](images/31-posted-reply-confirm-solution.png)
+<br>
+*Posted a reply confirming the solution.*
+
+---
+
+John posted a follow-up confirming Ken verified the fix.
+
+![Ticket 2 Follow-up](images/32-followup-ken-everything-working-up-and-running.png)
+<br>
+*Posted a follow-up confirming Ken verified the fix.*
+
+---
+
+John reviewed the full ticket history.
+
+![Ticket 2 Full History](images/33-full-replies-ticket-complete.png)
+<br>
+*Reviewed the full ticket history.*
+
+---
+
+John closed the ticket.
+
+![Ticket 2 Close](images/34a-close-ticket.png)
+<br>
+*Changed the ticket status to Closed.*
+
+---
+
+![Ticket 2 Close](images/34b-close-ticket-root-cause-solution-successful.png)
+<br>
+*Documented the root cause and solution.*
+
+---
+
+![Ticket 2 Closed](images/34c-close-ticket-changed-to-closed.png)
+<br>
+*Confirmed the ticket was successfully closed.*
+
+---
+
+**Result:** Successfully demonstrated the complete lifecycle of two support tickets from creation to resolution, including triage, SLA management, department routing, escalation, and closure.
+
 
 ---
 
