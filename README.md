@@ -535,115 +535,115 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Result:** The help desk is configured with departments, agents, roles, and SLAs.
 
-![Admin Dashboard](images/01-admin-dashboard.png)
+![Admin Dashboard](Images/01-admin-dashboard.png)
 <br>
 *Logged into the osTicket admin control panel to begin system configuration.*
 
 ---
 
-![Agent Roles](images/02a-agent-roles-tickets.png)
+![Agent Roles](Images/02a-agent-roles-tickets.png)
 <br>
 *Configured agent roles to control access and permissions (tickets, tasks, knowledgebase).*
 
 ---
 
-![Agent Roles](images/02b-agent-roles-tasks.png)
+![Agent Roles](Images/02b-agent-roles-tasks.png)
 <br>
 *Configured agent roles to control access and permissions (tickets, tasks, knowledgebase).*
 
 ---
 
-![Agent Roles](images/02c-agent-roles-knowledgebase.png)
+![Agent Roles](Images/02c-agent-roles-knowledgebase.png)
 <br>
 *Configured agent roles to control access and permissions (tickets, tasks, knowledgebase).*
 
 ---
 
-![Departments](images/03-departments-SysAdmins.png)
+![Departments](Images/03-departments-SysAdmins.png)
 <br>
 *Created departments (e.g., IT Support, Network Support) to properly route incoming tickets.*
 
 ---
 
-![Teams](images/04-teams-online_banking.png)
+![Teams](Images/04-teams-online_banking.png)
 <br>
 *Created the Online Banking team to pull agents from different departments.*
 
 ---
 
-![User Settings](images/05-user-settings-registration_required-unchecked.png)
+![User Settings](Images/05-user-settings-registration_required-unchecked.png)
 <br>
 *Configured User Settings to require registration and login before creating tickets.*
 
 ---
 
-![Agents](images/06.a-agents-added-jane_doe.png)
+![Agents](Images/06.a-agents-added-jane_doe.png)
 <br>
 *Provisioned new Agent accounts and assigned them to the correct departments and roles.*
 
 ---
 
-![Agents](images/06.b-agents-added-john_doe.png)
+![Agents](Images/06.b-agents-added-john_doe.png)
 <br>
 *Provisioned new Agent accounts and assigned them to the correct departments and roles.*
 
 ---
 
-![Users](images/07a-users-added-ken_gordan.png)
+![Users](Images/07a-users-added-ken_gordan.png)
 <br>
 *Created the end-user accounts Ken and Karen.*
 
 ---
 
-![Users](images/07b-users-added-karen_escrobano.png)
+![Users](Images/07b-users-added-karen_escrobano.png)
 <br>
 *Created the end-user accounts Ken and Karen.*
 
 ---
 
-![SLA Plans](images/08a-sla-plans-added-sev_a.png)
+![SLA Plans](Images/08a-sla-plans-added-sev_a.png)
 <br>
 *Configured SLA plans to define response and resolution timeframes.*
 
 ---
 
-![SLA Plans](images/08b-sla-plans-added-sev_b.png)
+![SLA Plans](Images/08b-sla-plans-added-sev_b.png)
 <br>
 *Configured SLA plans to define response and resolution timeframes.*
 
 ---
 
-![SLA Plans](images/08c-sla-plans-added-sev_c.png)
+![SLA Plans](Images/08c-sla-plans-added-sev_c.png)
 <br>
 *Configured SLA plans to define response and resolution timeframes.*
 
 ---
 
-![Help Topics](images/09a-help-topics-added-business_critical_outage.png)
+![Help Topics](Images/09a-help-topics-added-business_critical_outage.png)
 <br>
 *Configured the Help Topics for users to select when creating a ticket.*
 
 ---
 
-![Help Topics](images/09b-help-topics-added-personal_computer_issues.png)
+![Help Topics](Images/09b-help-topics-added-personal_computer_issues.png)
 <br>
 *Configured the Help Topics for users to select when creating a ticket.*
 
 ---
 
-![Help Topics](images/09c-help-topics-added-equipment_request.png)
+![Help Topics](Images/09c-help-topics-added-equipment_request.png)
 <br>
 *Configured the Help Topics for users to select when creating a ticket.*
 
 ---
 
-![Help Topics](images/09d-help-topics-added-password_reset.png)
+![Help Topics](Images/09d-help-topics-added-password_reset.png)
 <br>
 *Configured the Help Topics for users to select when creating a ticket.*
 
 ---
 
-![Help Topics](images/09e-help-topics-added-other.png)
+![Help Topics](Images/09e-help-topics-added-other.png)
 <br>
 *Configured the Help Topics for users to select when creating a ticket.*
 
@@ -657,7 +657,7 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 First, I changed the SysAdmins department to a Top Level Department and deleted the Maintenance department to clean up the department structure.
 
-![Department Changes](images/10a-dept-changes-maintenance-delete_page.png)
+![Department Changes](Images/10a-dept-changes-maintenance-delete_page.png)
 <br>
 *Deleted the Maintenance department and confirmed SysAdmins is a top-level department.*
 
@@ -665,13 +665,13 @@ First, I changed the SysAdmins department to a Top Level Department and deleted 
 
 As an end-user, I created the following ticket: "entire mobile/online banking system is down."
 
-![Ticket 1 Creation](images/11a-ticket1-creation-business_critical_outage.png)
+![Ticket 1 Creation](Images/11a-ticket1-creation-business_critical_outage.png)
 <br>
 *Submitted Ticket 1 as an end-user through the support portal.*
 
 ---
 
-![Ticket 1 Creation](images/11b-ticket1-creation-business_critical_outage-created.png)
+![Ticket 1 Creation](Images/11b-ticket1-creation-business_critical_outage-created.png)
 <br>
 *Confirmed the ticket was successfully created.*
 
@@ -679,7 +679,7 @@ As an end-user, I created the following ticket: "entire mobile/online banking sy
 
 As a Help Desk Agent (John), I observed the ticket's default properties (Priority, Department, SLA, Assigned To).
 
-![Ticket 1 Properties - John](images/12-ticket1-properties-john-read_only.png)
+![Ticket 1 Properties - John](Images/12-ticket1-properties-john-read_only.png)
 <br>
 *Observed the default properties of Ticket 1 as John.*
 
@@ -687,7 +687,7 @@ As a Help Desk Agent (John), I observed the ticket's default properties (Priorit
 
 I posted an internal note as John.
 
-![Ticket 1 Internal Note](images/13a-internal-note-posted.png)
+![Ticket 1 Internal Note](Images/13a-internal-note-posted.png)
 <br>
 *Posted an internal note confirming the read-only access test.*
 
@@ -695,7 +695,7 @@ I posted an internal note as John.
 
 I granted John full access to the SysAdmins department.
 
-![Admin Grants Access](images/14-admin-grants-john-all_access.png)
+![Admin Grants Access](Images/14-admin-grants-john-all_access.png)
 <br>
 *Granted John full access to the SysAdmins department.*
 
@@ -703,13 +703,13 @@ I granted John full access to the SysAdmins department.
 
 I set the priority to Emergency and documented the call with the end-user.
 
-![Ticket 1 Priority Update](images/15a-john-full-access-emergency.png)
+![Ticket 1 Priority Update](Images/15a-john-full-access-emergency.png)
 <br>
 *Updated the priority to Emergency and documented the call.*
 
 ---
 
-![Ticket 1 Priority Updated](images/15b-priority-level-updated-successfully.png)
+![Ticket 1 Priority Updated](Images/15b-priority-level-updated-successfully.png)
 <br>
 *Confirmed the priority was successfully updated.*
 
@@ -717,13 +717,13 @@ I set the priority to Emergency and documented the call with the end-user.
 
 I updated the SLA plan to Sev-A and documented the business impact.
 
-![Ticket 1 SLA Update](images/16a-sla-plan-typing.png)
+![Ticket 1 SLA Update](Images/16a-sla-plan-typing.png)
 <br>
 *Updated the SLA to Sev-A and documented the business impact.*
 
 ---
 
-![Ticket 1 SLA Updated](images/16b-sla-updated.png)
+![Ticket 1 SLA Updated](Images/16b-sla-updated.png)
 <br>
 *Confirmed the SLA was successfully updated.*
 
@@ -731,13 +731,13 @@ I updated the SLA plan to Sev-A and documented the business impact.
 
 I updated the Help Topic to Business Critical Outage.
 
-![Ticket 1 Help Topic Update](images/17a-help_topic-typing.png)
+![Ticket 1 Help Topic Update](Images/17a-help_topic-typing.png)
 <br>
 *Updated the Help Topic to Business Critical Outage.*
 
 ---
 
-![Ticket 1 Help Topic Updated](images/17b-help_topic-updated.png)
+![Ticket 1 Help Topic Updated](Images/17b-help_topic-updated.png)
 <br>
 *Confirmed the Help Topic was successfully updated.*
 
@@ -745,7 +745,7 @@ I updated the Help Topic to Business Critical Outage.
 
 I posted an escalation note documenting the transfer to the SysAdmin department.
 
-![Ticket 1 Escalation Note](images/18-john-escalation-note.png)
+![Ticket 1 Escalation Note](Images/18-john-escalation-note.png)
 <br>
 *Posted the escalation note in the ticket thread.*
 
@@ -753,13 +753,13 @@ I posted an escalation note documenting the transfer to the SysAdmin department.
 
 I assigned the ticket to Jane Doe.
 
-![Ticket 1 Assigned to Jane](images/19a-ticket-assigned-jane.png)
+![Ticket 1 Assigned to Jane](Images/19a-ticket-assigned-jane.png)
 <br>
 *Selected Jane Doe as the assignee.*
 
 ---
 
-![Ticket 1 Assigned to Jane](images/19b-ticket-assigned-jane-successfully.png)
+![Ticket 1 Assigned to Jane](Images/19b-ticket-assigned-jane-successfully.png)
 <br>
 *Confirmed the ticket was successfully assigned to Jane.*
 
@@ -767,7 +767,7 @@ I assigned the ticket to Jane Doe.
 
 I transferred the ticket to the SysAdmins department.
 
-![Ticket 1 Transferred to SysAdmins](images/20a-ticket-routed-sysadmins.png)
+![Ticket 1 Transferred to SysAdmins](Images/20a-ticket-routed-sysadmins.png)
 <br>
 *Transferred the ticket to the SysAdmins department.*
 
@@ -775,7 +775,7 @@ I transferred the ticket to the SysAdmins department.
 
 As John, I could no longer access the ticket after the transfer.
 
-![Ticket 1 Access Denied](images/20b-ticket-routed-sysadmins-john-no-longer-has-access.png)
+![Ticket 1 Access Denied](Images/20b-ticket-routed-sysadmins-john-no-longer-has-access.png)
 <br>
 *Confirmed John lost access to the ticket after the transfer.*
 
@@ -783,7 +783,7 @@ As John, I could no longer access the ticket after the transfer.
 
 Jane logged in and could see the escalated ticket.
 
-![Jane Logged In](images/21-jane-logged-in.png)
+![Jane Logged In](Images/21-jane-logged-in.png)
 <br>
 *Jane logged in and saw the Emergency ticket in her queue.*
 
@@ -791,19 +791,19 @@ Jane logged in and could see the escalated ticket.
 
 Jane reviewed the full ticket history and posted a resolution reply.
 
-![Ticket 1 Full History](images/22-ticket-full-history-jane.png)
+![Ticket 1 Full History](Images/22-ticket-full-history-jane.png)
 <br>
 *Jane reviewed the full ticket history.*
 
 ---
 
-![Ticket 1 Resolution Reply](images/23a-jane-post-reply.png)
+![Ticket 1 Resolution Reply](Images/23a-jane-post-reply.png)
 <br>
 *Jane posted the resolution reply.*
 
 ---
 
-![Ticket 1 Resolution Reply](images/23b-jane-post-reply-successfully.png)
+![Ticket 1 Resolution Reply](Images/23b-jane-post-reply-successfully.png)
 <br>
 *Confirmed Jane's reply was posted successfully.*
 
@@ -811,7 +811,7 @@ Jane reviewed the full ticket history and posted a resolution reply.
 
 Jane posted a final closing message.
 
-![Ticket 1 Closing Message](images/24-jane-posting-resolved-problem-closing-ticket.png)
+![Ticket 1 Closing Message](Images/24-jane-posting-resolved-problem-closing-ticket.png)
 <br>
 *Jane posted the final closing message.*
 
@@ -819,19 +819,19 @@ Jane posted a final closing message.
 
 Jane changed the status to Resolved.
 
-![Ticket 1 Status Resolved](images/25a-ticket-status-resolved.png)
+![Ticket 1 Status Resolved](Images/25a-ticket-status-resolved.png)
 <br>
 *Changed the ticket status to Resolved.*
 
 ---
 
-![Ticket 1 Status Resolved](images/25b-ticket-status-resolved-closed.png)
+![Ticket 1 Status Resolved](Images/25b-ticket-status-resolved-closed .png)
 <br>
 *Confirmed the ticket status was changed to Resolved.*
 
 ---
 
-![Ticket 1 Status Resolved](images/25c-ticket-status-changed-resolved.png)
+![Ticket 1 Status Resolved](Images/25c-ticket-status-changed-resolved.png)
 <br>
 *Confirmed the ticket was successfully resolved.*
 
@@ -839,7 +839,7 @@ Jane changed the status to Resolved.
 
 I repeated the process for the second ticket: "accounting department needs adobe upgrade, broken." Ken created the ticket.
 
-![Ticket 2 Creation](images/26-ken-ticket-created.png)
+![Ticket 2 Creation](Images/26-ken-ticket-created.png)
 <br>
 *Ken created the Adobe Reader ticket.*
 
@@ -847,7 +847,7 @@ I repeated the process for the second ticket: "accounting department needs adobe
 
 John received the ticket and observed the properties.
 
-![Ticket 2 Received](images/27-john-recieves-ticket-ken.png)
+![Ticket 2 Received](Images/27-john-recieves-ticket-ken.png)
 <br>
 *John received the ticket and observed the properties.*
 
@@ -855,7 +855,7 @@ John received the ticket and observed the properties.
 
 John posted a detailed note documenting the investigation.
 
-![Ticket 2 Investigation](images/28-jane-posted-details-ken-situation-ticket.png)
+![Ticket 2 Investigation](Images/28-jane-posted-details-ken-situation-ticket.png)
 <br>
 *John documented the investigation details.*
 
@@ -863,13 +863,13 @@ John posted a detailed note documenting the investigation.
 
 John updated the priority to High.
 
-![Ticket 2 Priority Update](images/29a-priority-level-high-update.png)
+![Ticket 2 Priority Update](Images/29a-priority-level-high-update.png)
 <br>
 *Updated the priority to High.*
 
 ---
 
-![Ticket 2 Priority Updated](images/29b-priority-level-high-update-successful.png)
+![Ticket 2 Priority Updated](Images/29b-priority-level-high-update-successful.png)
 <br>
 *Confirmed the priority was successfully updated.*
 
@@ -877,13 +877,13 @@ John updated the priority to High.
 
 John updated the SLA to Sev-B.
 
-![Ticket 2 SLA Update](images/30a-sla_plan-sev-b-update.png)
+![Ticket 2 SLA Update](Images/30a-sla_plan-sev-b-update.png)
 <br>
 *Updated the SLA to Sev-B.*
 
 ---
 
-![Ticket 2 SLA Updated](images/30b-sla_plan-sev-b-update-successfully.png)
+![Ticket 2 SLA Updated](Images/30b-sla_plan-sev-b-update-successfully.png)
 <br>
 *Confirmed the SLA was successfully updated.*
 
@@ -891,7 +891,7 @@ John updated the SLA to Sev-B.
 
 John posted a reply confirming the solution.
 
-![Ticket 2 Solution](images/31-posted-reply-confirm-solution.png)
+![Ticket 2 Solution](Images/31-posted-reply-confirm-solution.png)
 <br>
 *Posted a reply confirming the solution.*
 
@@ -899,7 +899,7 @@ John posted a reply confirming the solution.
 
 John posted a follow-up confirming Ken verified the fix.
 
-![Ticket 2 Follow-up](images/32-followup-ken-everything-working-up-and-running.png)
+![Ticket 2 Follow-up](Images/32-followup-ken-everything-working-up-and-running.png)
 <br>
 *Posted a follow-up confirming Ken verified the fix.*
 
@@ -907,7 +907,7 @@ John posted a follow-up confirming Ken verified the fix.
 
 John reviewed the full ticket history.
 
-![Ticket 2 Full History](images/33-full-replies-ticket-complete.png)
+![Ticket 2 Full History](Images/33-full-replies-ticket-complete.png)
 <br>
 *Reviewed the full ticket history.*
 
@@ -915,19 +915,19 @@ John reviewed the full ticket history.
 
 John closed the ticket.
 
-![Ticket 2 Close](images/34a-close-ticket.png)
+![Ticket 2 Close](Images/34a-close-ticket.png)
 <br>
 *Changed the ticket status to Closed.*
 
 ---
 
-![Ticket 2 Close](images/34b-close-ticket-root-cause-solution-successful.png)
+![Ticket 2 Close](Images/34b-close-ticket-root-cause-solution-successful.png)
 <br>
 *Documented the root cause and solution.*
 
 ---
 
-![Ticket 2 Closed](images/34c-close-ticket-changed-to-closed.png)
+![Ticket 2 Closed](Images/34c-close-ticket-changed-to-closed.png)
 <br>
 *Confirmed the ticket was successfully closed.*
 
