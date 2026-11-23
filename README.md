@@ -20,6 +20,19 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
+## ⏱️ At a Glance
+
+If you are short on time, here is what this project proves and where to find it.
+
+| What this project proves | Where to look |
+| :--- | :--- |
+| I can deploy a full web stack (IIS, PHP, MySQL) on a Windows Server in Azure. | Step 1 through Step 16 |
+| I can configure a help desk system for a real support team (roles, departments, SLAs, help topics). | Step 17 |
+| I can manage the full lifecycle of a support ticket from creation to resolution, including escalation and permission changes. | Step 18 |
+| I can document technical work clearly with step-by-step instructions and visual evidence. | Every step |
+
+---
+
 ## 🖥️ Environment
 
 - Microsoft Azure (Virtual Machines)
