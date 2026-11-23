@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1 align="center">osTicket – Prerequisites & Installation (Lab)</h1>
+<h1 align="center">osTicket: Help Desk Deployment & Administration (Lab)</h1>
 
 <p align="center">
   End-to-end technical deployment of the osTicket help desk system on Microsoft Azure
